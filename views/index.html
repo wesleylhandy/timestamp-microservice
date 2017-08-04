@@ -1,0 +1,73 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timestamp Microservice</title>
+    <meta name="description" content="Timestamp Microservice made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      
+      <header>Timestamp microservice</header>
+      <section>
+        <h1>
+          How does this work?
+        </h1>
+
+        <ol>
+          <li><p>
+            Pass either a date or a unix timestamp as a paramter appended to the url for this page.
+            </p></li>
+          <li><p>
+            If the parameter is either a valid date or a timestamp, this service will return a JSON object that includes both the natural date and the unix timestamp for the requested date.
+            </p></li>
+          <li><p>
+            However, if either parameter is missing, then it will return a JSON object with null values.
+            </p>
+            <p>
+              For Instance:
+            </p>
+            <p>
+              Input -&gt;
+            </p>
+            <div>
+
+               <p class="code">
+                 <a href="https://what-time.glitch.me/April%208%201974">https://what-time.glitch.me/April%208%201974</a>
+              </p>
+            </div>
+            <div>
+
+               <p class="code">
+                  <a href="https://what-time.glitch.me/134683200000">https://what-time.glitch.me/134683200000</a>
+              </p>
+            </div>
+            <p>
+              Output -&gt;
+            </p>
+            <p class="code">
+              { "unix": 260496000, "natural": "April 4, 1978" }
+            </p>
+
+          </li>
+
+        </ol>
+      </section>
+    </div>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
